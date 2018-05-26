@@ -1,4 +1,5 @@
 import java.util.*
+import kotlin.reflect.jvm.internal.ReflectProperties
 
 //Sealed class é usada para restringir uma hierarquia, ou seja, se um valor pode ser de um conjunto limitado de tipos
 //ele é de um tipo que é como se fosse uma enum de classes essa enum de classes é representada em Kotlin como sealed
@@ -54,16 +55,73 @@ data class TmTl (val e : Term) : Term()
 data class TmIsEmpty(val e : Term) : Term()
 data class TmCat(val e1 : Term, val e2 : Term) : Term()
 
-data class Env(val d : Dictionary<TmVar, Term>)
-
 sealed class Value
 data class Vnum (val n: Int) : Value()
 data class Vbool (val b: Boolean) : Value()
 data class Vlist (val l: List<Value>) : Value()
-data class VClosure(val x : Term, val e : Term, val env : Env) : Term()
-data class VRecClosure(val f : Term, val x : Term, val e : Term, val env : Env) : Term()
+data class VClosure(val x : TmVar, val e : Term, val env : Env) : Value()
+data class VRecClosure(val f : TmVar, val x : TmVar, val e : Term, val env : Env) : Value()
 
 
+data class Env(val d : Dictionary<TmVar, Value>)
 
 
+class NoRuleApplies : Throwable()
+class IdentNotDefined : Throwable()
+
+
+//Trechos marcados com:
+//  * : nunca devem acontecer se verificação de tipos for correta
+fun bigStep (e : Term, env : Env) : Value{
+    return when (e){
+        is TmNum -> Vnum(e.n) // BS-NUM
+        is TmBool -> Vbool(e.b) // BS-BOOL
+        is TmVar -> try{ env.d[e]} catch (ex : Exception){throw IdentNotDefined()} //BS-ID
+        is TmIf -> {
+            val condition : Value = bigStep(e.e1, env)
+            when {
+                condition !is Vbool -> throw NoRuleApplies() // *
+                condition.b -> bigStep(e.e2, env) // BS-IFTR
+                else -> bigStep(e.e3, env) //BS-IFFLS
+            }
+        }
+        is TmFn -> VClosure(e.x, e.e, env) //BS-FN
+        is TmLet ->{
+            val resultE1 : Value = bigStep(e.e1, env)
+            var envExt: Env = env.copy()
+            envExt.d.put(e.x, resultE1)
+            bigStep(e.e2, envExt) // valor retornado // BS-LET
+        }
+        is TmLetRec ->{
+
+            val rclos = VRecClosure(e.f, e.x, e.e1, env)
+            var envExt: Env = env.copy()
+            envExt.d.put(e.f, rclos)
+            bigStep(e.e2, envExt) // valor retornado // BS-LETREC
+
+        }
+        is TmApp->{
+            val e1Result = bigStep(e.e1, env)
+            val e2Result = bigStep(e.e2, env)
+
+            when (e1Result) {
+                is VClosure -> {
+                    var extEnv = e1Result.env.copy()
+                    extEnv.d.put(e1Result.x, e2Result)
+                    bigStep(e1Result.e, extEnv) //BS-APP
+                }
+                is VRecClosure -> {
+                    var extEnv = e1Result.env.copy()
+                    extEnv.d.put(e1Result.x, e2Result)
+                    extEnv.d.put(e1Result.f, e1Result)
+                    bigStep(e1Result.e, extEnv) //BS-APPREC
+                }
+                else -> throw NoRuleApplies() //*
+            }
+        }
+        else -> {
+            throw NoRuleApplies()
+        }
+    }
+}
 
