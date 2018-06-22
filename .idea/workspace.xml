@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b09ea6a2-3a5c-4fac-b954-9dbcf36fadc5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/BigStepTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ToStringTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TokenizationTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1_plus_plus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/L1_plus_plus.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BigStepEvaluator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/BigStepEvaluator.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,13 +19,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TokenizationTest.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-31">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BigStepTest.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="192" column="1" lean-forward="true" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToStringTest.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ToStringTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="149" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BigStepEvaluator.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="32" column="112" lean-forward="true" selection-start-line="32" selection-start-column="112" selection-end-line="32" selection-end-column="112" />
+            <state relative-caret-position="153">
+              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
-                <element signature="e#0#71#0" expanded="true" />
+                <element signature="e#0#116#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,12 +76,27 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fromString</find>
+      <find />
+      <find>rec</find>
+      <find>Type</find>
+      <find>toString</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/toStringTest.kt" />
+        <option value="$PROJECT_DIR$/src/BigStepEvaluatorTest.kt" />
+        <option value="$PROJECT_DIR$/src/tokenizationTest.kt" />
+        <option value="$PROJECT_DIR$/src/ToStringTest.kt" />
+        <option value="$PROJECT_DIR$/src/bigStepTest.kt" />
+        <option value="$PROJECT_DIR$/src/BigStepTest.kt" />
         <option value="$PROJECT_DIR$/src/BigStepEvaluator.kt" />
       </list>
     </option>
@@ -55,9 +110,8 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="434" />
-    <option name="y" value="-19" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -68,6 +122,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -77,13 +132,17 @@
             </path>
             <path>
               <item name="AvaliadorL1++" type="b2602c69:ProjectViewProjectNode" />
+              <item name="L1_plus_plus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AvaliadorL1++" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -106,9 +165,94 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.BigStepTest.opTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="BigStepTest.letRecTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="L1_plus_plus" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BigStepTest" />
+      <option name="METHOD_NAME" value="letRecTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BigStepTest.letTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="L1_plus_plus" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BigStepTest" />
+      <option name="METHOD_NAME" value="letTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BigStepTest.listOpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="L1_plus_plus" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BigStepTest" />
+      <option name="METHOD_NAME" value="listOpTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BigStepTest.opTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="L1_plus_plus" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BigStepTest" />
+      <option name="METHOD_NAME" value="opTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BigStepTest.tryWithTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="L1_plus_plus" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BigStepTest" />
+      <option name="METHOD_NAME" value="tryWithTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -148,6 +292,22 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="JUnit.BigStepTest.letTest" />
+      <item itemvalue="JUnit.BigStepTest.letRecTest" />
+      <item itemvalue="JUnit.BigStepTest.listOpTest" />
+      <item itemvalue="JUnit.BigStepTest.tryWithTest" />
+      <item itemvalue="JUnit.BigStepTest.opTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BigStepTest.opTest" />
+        <item itemvalue="JUnit.BigStepTest.tryWithTest" />
+        <item itemvalue="JUnit.BigStepTest.listOpTest" />
+        <item itemvalue="JUnit.BigStepTest.letRecTest" />
+        <item itemvalue="JUnit.BigStepTest.letTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -161,7 +321,13 @@
       <updated>1527275433434</updated>
       <workItem from="1527275441777" duration="6577000" />
       <workItem from="1527287761142" duration="4826000" />
-      <workItem from="1527344192533" duration="7319000" />
+      <workItem from="1527344192533" duration="8078000" />
+      <workItem from="1527522895102" duration="16045000" />
+      <workItem from="1527864599388" duration="10026000" />
+      <workItem from="1528554157503" duration="624000" />
+      <workItem from="1528927309206" duration="30000" />
+      <workItem from="1529628204286" duration="14071000" />
+      <workItem from="1529686187352" duration="9638000" />
     </task>
     <task id="LOCAL-00001" summary="rename the project">
       <created>1527287798274</created>
@@ -177,11 +343,50 @@
       <option name="project" value="LOCAL" />
       <updated>1527301866011</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adicionadas regras para tratar operadores, listas e exceções">
+      <created>1527364627707</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527364627707</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="BigStepTest_fnTest - 2018.06.22 at 15h 01m 58s.xml">
+      <configuration name="BigStepTest.fnTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BigStepTest_appTest - 2018.06.22 at 15h 04m 34s.xml">
+      <configuration name="BigStepTest.appTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BigStepTest_letTest - 2018.06.22 at 15h 22m 29s.xml">
+      <configuration name="BigStepTest.letTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BigStepTest_letRecTest - 2018.06.22 at 15h 28m 10s.xml">
+      <configuration name="BigStepTest.letRecTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BigStepTest_letRecTest - 2018.06.22 at 15h 28m 21s.xml">
+      <configuration name="BigStepTest.letRecTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BigStepTest_letRecTest - 2018.06.22 at 15h 28m 35s.xml">
+      <configuration name="BigStepTest.letRecTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BigStepTest_listOpTest - 2018.06.22 at 15h 49m 18s.xml">
+      <configuration name="BigStepTest.listOpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BigStepTest_listOpTest - 2018.06.22 at 16h 00m 24s.xml">
+      <configuration name="BigStepTest.listOpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BigStepTest_tryWithTest - 2018.06.22 at 16h 03m 47s.xml">
+      <configuration name="BigStepTest.tryWithTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BigStepTest_opTest - 2018.06.22 at 16h 34m 15s.xml">
+      <configuration name="BigStepTest.opTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18722000" />
+    <option name="totallyTimeSpent" value="69915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -189,32 +394,63 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3290938" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.111273795" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17203514" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3290938" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3290938" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.121522695" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -227,15 +463,101 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="rename the project" />
     <MESSAGE value="Regras básicas de L1 sem extenções adicionadas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Regras básicas de L1 sem extenções adicionadas" />
+    <MESSAGE value="Adicionadas regras para tratar operadores, listas e exceções" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionadas regras para tratar operadores, listas e exceções" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="7" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ToStringTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7820">
+          <caret line="463" column="31" selection-start-line="463" selection-start-column="31" selection-end-line="463" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4777">
+          <caret line="283" selection-start-line="283" selection-end-line="283" />
+          <folding>
+            <element signature="e#0#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4811">
+          <caret line="283" selection-start-line="283" selection-end-line="283" />
+          <folding>
+            <element signature="e#0#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4811">
+          <caret line="283" lean-forward="true" selection-start-line="283" selection-end-line="283" />
+          <folding>
+            <element signature="e#0#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5644">
+          <caret line="332" column="4" selection-start-line="332" selection-start-column="4" selection-end-line="332" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2159">
           <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
           <folding>
-            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#0#116#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -245,17 +567,47 @@
         <state relative-caret-position="221">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#0#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ToStringTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="149" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="192" column="1" lean-forward="true" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="32" column="112" lean-forward="true" selection-start-line="32" selection-start-column="112" selection-end-line="32" selection-end-column="112" />
+        <state relative-caret-position="153">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding>
-            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#0#116#0" expanded="true" />
           </folding>
         </state>
       </provider>
