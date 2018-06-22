@@ -111,6 +111,60 @@ fun catLists(l1 : Value, l2 : Value) : Value
     }
 }
 
+fun addConstraints (list1 : MutableList<String>, list2 : MutableList<String>): MutableList<String>{
+    var newList = mutableListOf<String>()
+    for(constraint in list1){
+        newList.add(constraint)
+    }
+    for(constraint in list2){
+        newList.add(constraint)
+    }
+    return newList
+}
+
+fun addConstraints(list : MutableList<String>): MutableList<String>{
+    var newList = mutableListOf<String>()
+    for(constraint in list){
+        newList.add(constraint)
+    }
+    return newList
+}
+
+data class identTable(val d : Dictionary<String, String>) //dicionario de string(ident)->string(tipo)
+
+fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints : MutableList<String>, name : String): MutableList<String> {
+    return when (e){
+        is TmLet -> {
+            var newConstraints: MutableList<String>
+            var newConstraints2: MutableList<String>
+            var endConstraints: MutableList<String>
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints)
+            endConstraints = addConstraints(constraints)
+            endConstraints = addConstraints(endConstraints, newConstraints)
+            endConstraints = addConstraints(endConstraints, newConstraints2)
+            endConstraints.add("X=T1")
+            ident.d.put(e.x.x, "X")
+            endConstraints
+        }
+        is TmNum -> constraints
+        is TmBool -> constraints
+        is TmIf -> {
+            var newConstraints: MutableList<String>
+            var newConstraints2: MutableList<String>
+            var newConstraints3: MutableList<String>
+            var endConstraints: MutableList<String>
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints)
+            newConstraints3 = typeConsColl(e.e3, ident, recursionLevel + 1, constraints)
+            endConstraints = addConstraints(constraints, newConstraints)
+            endConstraints = addConstraints(endConstraints, newConstraints2)
+            endConstraints = addConstraints(endConstraints, newConstraints3)
+            endConstraints
+        }
+    }
+}
+
 //Trechos marcados com:
 //  * : nunca devem acontecer se verificação de tipos for correta
 fun bigStep (e : Term, env : Env) : ValueOrRaise{
