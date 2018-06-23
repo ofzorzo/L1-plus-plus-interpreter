@@ -42,7 +42,7 @@ class TypeConstraintsCollectorTest {
         println(ident.d)
 
         ident = identTable(hashMapOf())
-        val ans3 = mutableListOf<String>("bool=bool", "bool=bool", "bool=int")
+        val ans3 = mutableListOf<String>("bool=bool", "bool=bool", "bool=int") // esse int vem do fato de que a ultima constraint é T=T1; T o usuário informou que é bool, e T1 é o tipo da expressão e1, que no caso é int (num2)
         Assert.assertEquals(Pair("bool", ans3), typeConsColl(let3, ident, 0, mutableListOf(), "zorzo", false))
         println(ident.d)
 
