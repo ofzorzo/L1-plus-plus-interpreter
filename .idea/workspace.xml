@@ -2,11 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b09ea6a2-3a5c-4fac-b954-9dbcf36fadc5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BigStepTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ToStringTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TokenizationTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TypeConstraintsCollectorTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L1_plus_plus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/L1_plus_plus.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/AddOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/AddOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/AddOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/AddOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/AndOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/AndOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/AndOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/AndOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/BigStepEvaluatorKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/BigStepEvaluatorKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/BigStepTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/BigStepTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/BinBoolOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/BinBoolOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/BinNumOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/BinNumOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/CompNumOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/CompNumOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/DivOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/DivOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/DivOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/DivOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Env.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Env.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/EqOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/EqOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/EqOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/EqOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/GeOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/GeOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/GeOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/GeOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/GrOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/GrOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/GrOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/GrOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/IdentNotDefined.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/IdentNotDefined.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/MulOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/MulOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/MulOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/MulOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/NeqOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/NeqOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/NeqOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/NeqOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/NoRuleApplies.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/NoRuleApplies.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/NotOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/NotOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/NotOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/NotOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/OrOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/OrOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/OrOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/OrOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/ParentesisDoesNotMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/ParentesisDoesNotMatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Raise.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Raise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SeOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SeOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SeOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SeOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SintaxError.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SintaxError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SmOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SmOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SmOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SmOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SubOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SubOp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SubOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SubOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Term.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Term.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmBool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmBool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmCat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmCat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmFinishExpr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmFinishExpr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmFn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmFn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmHd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmHd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmIf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmIf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmIsEmpty.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmIsEmpty.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmLet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmLet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmLetRec.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmLetRec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmNil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmNil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmNum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmNum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmRaise.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmRaise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmTl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmTl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmTryWith.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmTryWith.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmVar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmVar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TyBool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TyBool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TyFn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TyFn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TyInt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TyInt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TyList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/UnaryBoolOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/UnaryBoolOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/VClosure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/VClosure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/VRecClosure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/VRecClosure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Value.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Value.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/ValueOrRaise.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/ValueOrRaise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Vbool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Vbool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Vlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Vlist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Vnil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Vnil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Vnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Vnum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BigStepEvaluator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/BigStepEvaluator.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,7 +88,7 @@
       <file leaf-file-name="TokenizationTest.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-31">
+            <state relative-caret-position="34">
               <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
@@ -34,8 +100,8 @@
       <file leaf-file-name="BigStepTest.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="192" column="1" lean-forward="true" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />
+            <state relative-caret-position="178">
+              <caret line="110" column="4" lean-forward="true" selection-start-line="110" selection-start-column="4" selection-end-line="111" selection-end-column="55" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -46,8 +112,8 @@
       <file leaf-file-name="ToStringTest.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ToStringTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="149" selection-end-column="5" />
+            <state relative-caret-position="16">
+              <caret line="75" column="44" lean-forward="true" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -55,13 +121,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BigStepEvaluator.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BigStepEvaluator.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="194">
+              <caret line="204" column="16" selection-start-line="204" selection-start-column="11" selection-end-line="204" selection-end-column="16" />
               <folding>
-                <element signature="e#0#116#0" expanded="true" />
+                <element signature="e#0#150#0" expanded="true" />
+                <element signature="e#4820#5020#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TypeConstraintsCollectorTest.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TypeConstraintsCollectorTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,6 +162,24 @@
       <find>rec</find>
       <find>Type</find>
       <find>toString</find>
+      <find>tmvar</find>
+      <find>tmnum</find>
+      <find>tostring</find>
+      <find>andop</find>
+      <find>tmfinishexpr</find>
+      <find>val d</find>
+      <find>Env</find>
+      <find>Env(</find>
+      <find>d.get</find>
+      <find>hashmap</find>
+      <find>hm.</find>
+      <find>hm</find>
+      <find>hm[</find>
+      <find>name</find>
+      <find>optest</find>
+      <find>if2</find>
+      <find>defvar</find>
+      <find>tmlet</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,6 +195,7 @@
         <option value="$PROJECT_DIR$/src/bigStepTest.kt" />
         <option value="$PROJECT_DIR$/src/BigStepTest.kt" />
         <option value="$PROJECT_DIR$/src/BigStepEvaluator.kt" />
+        <option value="$PROJECT_DIR$/src/TypeConstraintsCollectorTest.kt" />
       </list>
     </option>
   </component>
@@ -110,10 +208,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -121,8 +220,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,7 +242,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -152,6 +251,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -165,26 +269,44 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BigStepTest.opTest">
+  <component name="RunManager" selected="JUnit.TypeConstraintsCollectorTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="BigStepTest.letRecTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="L1_plus_plus" />
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BigStepTest" />
-      <option name="METHOD_NAME" value="letRecTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
-      <patterns />
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
     </configuration>
     <configuration name="BigStepTest.letTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="L1_plus_plus" />
@@ -220,7 +342,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="BigStepTest.opTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BigStepTest.opTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="L1_plus_plus" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -229,8 +351,8 @@
       <option name="METHOD_NAME" value="opTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
@@ -254,6 +376,57 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="ToStringTest.fnTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="L1_plus_plus" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ToStringTest" />
+      <option name="METHOD_NAME" value="fnTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TypeConstraintsCollectorTest" type="JUnit" factoryName="JUnit">
+      <module name="L1_plus_plus" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TypeConstraintsCollectorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TypeConstraintsCollectorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="L1_plus_plus" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TypeConstraintsCollectorTest" />
+      <option name="METHOD_NAME" value="ifTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -269,6 +442,39 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="L1_plus_plus" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -292,19 +498,55 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
     <list>
+      <item itemvalue="JUnit.BigStepTest.opTest" />
+      <item itemvalue="JUnit.TypeConstraintsCollectorTest" />
       <item itemvalue="JUnit.BigStepTest.letTest" />
-      <item itemvalue="JUnit.BigStepTest.letRecTest" />
       <item itemvalue="JUnit.BigStepTest.listOpTest" />
       <item itemvalue="JUnit.BigStepTest.tryWithTest" />
-      <item itemvalue="JUnit.BigStepTest.opTest" />
+      <item itemvalue="JUnit.ToStringTest.fnTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BigStepTest.opTest" />
+        <item itemvalue="JUnit.TypeConstraintsCollectorTest" />
+        <item itemvalue="JUnit.ToStringTest.fnTest" />
         <item itemvalue="JUnit.BigStepTest.tryWithTest" />
         <item itemvalue="JUnit.BigStepTest.listOpTest" />
-        <item itemvalue="JUnit.BigStepTest.letRecTest" />
         <item itemvalue="JUnit.BigStepTest.letTest" />
       </list>
     </recent_temporary>
@@ -328,6 +570,8 @@
       <workItem from="1528927309206" duration="30000" />
       <workItem from="1529628204286" duration="14071000" />
       <workItem from="1529686187352" duration="9638000" />
+      <workItem from="1529698741598" duration="17087000" />
+      <workItem from="1529717197924" duration="4878000" />
     </task>
     <task id="LOCAL-00001" summary="rename the project">
       <created>1527287798274</created>
@@ -350,106 +594,126 @@
       <option name="project" value="LOCAL" />
       <updated>1527364627707</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Discussão sobre coletar type constraints">
+      <created>1529699133645</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1529699133645</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Coleta de type constraints">
+      <created>1529714777305</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1529714777305</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BigStepTest_fnTest - 2018.06.22 at 15h 01m 58s.xml">
-      <configuration name="BigStepTest.fnTest" configurationId="JUnit" />
+    <history-entry file="TypeConstraintsCollectorTest_ifTest - 2018.06.22 at 23h 38m 29s.xml">
+      <configuration name="TypeConstraintsCollectorTest.ifTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BigStepTest_appTest - 2018.06.22 at 15h 04m 34s.xml">
-      <configuration name="BigStepTest.appTest" configurationId="JUnit" />
+    <history-entry file="TypeConstraintsCollectorTest_ifTest - 2018.06.22 at 23h 38m 43s.xml">
+      <configuration name="TypeConstraintsCollectorTest.ifTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BigStepTest_letTest - 2018.06.22 at 15h 22m 29s.xml">
-      <configuration name="BigStepTest.letTest" configurationId="JUnit" />
+    <history-entry file="TypeConstraintsCollectorTest_ifTest - 2018.06.22 at 23h 38m 51s.xml">
+      <configuration name="TypeConstraintsCollectorTest.ifTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BigStepTest_letRecTest - 2018.06.22 at 15h 28m 10s.xml">
-      <configuration name="BigStepTest.letRecTest" configurationId="JUnit" />
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 39m 25s.xml">
+      <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BigStepTest_letRecTest - 2018.06.22 at 15h 28m 21s.xml">
-      <configuration name="BigStepTest.letRecTest" configurationId="JUnit" />
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 39m 32s.xml">
+      <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BigStepTest_letRecTest - 2018.06.22 at 15h 28m 35s.xml">
-      <configuration name="BigStepTest.letRecTest" configurationId="JUnit" />
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 40m 14s.xml">
+      <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BigStepTest_listOpTest - 2018.06.22 at 15h 49m 18s.xml">
-      <configuration name="BigStepTest.listOpTest" configurationId="JUnit" />
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 40m 57s.xml">
+      <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BigStepTest_listOpTest - 2018.06.22 at 16h 00m 24s.xml">
-      <configuration name="BigStepTest.listOpTest" configurationId="JUnit" />
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 43m 58s.xml">
+      <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BigStepTest_tryWithTest - 2018.06.22 at 16h 03m 47s.xml">
-      <configuration name="BigStepTest.tryWithTest" configurationId="JUnit" />
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 44m 32s.xml">
+      <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BigStepTest_opTest - 2018.06.22 at 16h 34m 15s.xml">
-      <configuration name="BigStepTest.opTest" configurationId="JUnit" />
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 46m 02s.xml">
+      <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69915000" />
+    <option name="totallyTimeSpent" value="91880000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3290938" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17203514" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Palette" order="11" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32925585" />
+      <window_info anchor="right" id="Palette&#9;" order="11" />
+      <window_info id="Image Layers" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005208" side_tool="true" weight="0.32925585" />
+      <window_info anchor="right" id="Maven Projects" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49739584" weight="0.18450561" />
+      <window_info active="true" anchor="bottom" id="Run" order="11" sideWeight="0.49947917" visible="true" weight="0.32925585" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info id="Designer" order="8" />
+      <window_info content_ui="combo" id="Project" order="8" visible="true" weight="0.25572917" />
+      <window_info anchor="right" id="Database" order="11" />
+      <window_info id="Structure" order="8" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="11" />
+      <window_info id="UI Designer" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info id="Favorites" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="11" />
+      <window_info anchor="right" id="Gradle" order="7" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info id="Nl-Palette" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="right" id="Properties" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
+      <window_info id="Designer" order="0" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3290938" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.3290938" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.121522695" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Image Layers" order="1" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49947917" visible="true" weight="0.32925585" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="4" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Properties" order="5" />
+      <window_info anchor="bottom" id="Terminal" order="6" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" visible="true" weight="0.32925585" />
+      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49739584" weight="0.18450561" />
+      <window_info id="Nl-Palette" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.25572917" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info id="Structure" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="11" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,14 +728,102 @@
     <MESSAGE value="rename the project" />
     <MESSAGE value="Regras básicas de L1 sem extenções adicionadas" />
     <MESSAGE value="Adicionadas regras para tratar operadores, listas e exceções" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionadas regras para tratar operadores, listas e exceções" />
+    <MESSAGE value="Discussão sobre coletar type constraints" />
+    <MESSAGE value="Coleta de type constraints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coleta de type constraints" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="7" />
     </breakpoint-manager>
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2528">
+          <caret line="158" column="5" lean-forward="true" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ToStringTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="75" column="44" lean-forward="true" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2208">
+          <caret line="138" column="20" lean-forward="true" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#150#0" expanded="true" />
+            <element signature="e#4820#5020#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3247">
+          <caret line="192" column="1" lean-forward="true" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ToStringTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" selection-start-line="6" selection-end-line="149" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#150#0" expanded="true" />
+            <element signature="e#4820#5020#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -497,7 +849,8 @@
         <state relative-caret-position="7820">
           <caret line="463" column="31" selection-start-line="463" selection-start-column="31" selection-end-line="463" selection-end-column="31" />
           <folding>
-            <element signature="e#0#116#0" expanded="true" />
+            <element signature="e#0#150#0" expanded="true" />
+            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -507,7 +860,8 @@
         <state relative-caret-position="4777">
           <caret line="283" selection-start-line="283" selection-end-line="283" />
           <folding>
-            <element signature="e#0#116#0" expanded="true" />
+            <element signature="e#0#150#0" expanded="true" />
+            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -517,7 +871,8 @@
         <state relative-caret-position="4811">
           <caret line="283" selection-start-line="283" selection-end-line="283" />
           <folding>
-            <element signature="e#0#116#0" expanded="true" />
+            <element signature="e#0#150#0" expanded="true" />
+            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -527,7 +882,8 @@
         <state relative-caret-position="4811">
           <caret line="283" lean-forward="true" selection-start-line="283" selection-end-line="283" />
           <folding>
-            <element signature="e#0#116#0" expanded="true" />
+            <element signature="e#0#150#0" expanded="true" />
+            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -537,7 +893,8 @@
         <state relative-caret-position="5644">
           <caret line="332" column="4" selection-start-line="332" selection-start-column="4" selection-end-line="332" selection-end-column="4" />
           <folding>
-            <element signature="e#0#116#0" expanded="true" />
+            <element signature="e#0#150#0" expanded="true" />
+            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -547,7 +904,8 @@
         <state relative-caret-position="1156">
           <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
           <folding>
-            <element signature="e#0#116#0" expanded="true" />
+            <element signature="e#0#150#0" expanded="true" />
+            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -557,7 +915,8 @@
         <state relative-caret-position="2159">
           <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
           <folding>
-            <element signature="e#0#116#0" expanded="true" />
+            <element signature="e#0#150#0" expanded="true" />
+            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -567,14 +926,15 @@
         <state relative-caret-position="221">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="e#0#116#0" expanded="true" />
+            <element signature="e#0#150#0" expanded="true" />
+            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
+        <state relative-caret-position="34">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
@@ -584,18 +944,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ToStringTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="149" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="192" column="1" lean-forward="true" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />
+        <state relative-caret-position="16">
+          <caret line="75" column="44" lean-forward="true" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -604,10 +954,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="194">
+          <caret line="204" column="16" selection-start-line="204" selection-start-column="11" selection-end-line="204" selection-end-column="16" />
           <folding>
-            <element signature="e#0#116#0" expanded="true" />
+            <element signature="e#0#150#0" expanded="true" />
+            <element signature="e#4820#5020#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="110" column="4" lean-forward="true" selection-start-line="110" selection-start-column="4" selection-end-line="111" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TypeConstraintsCollectorTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -2,6 +2,7 @@ import java.util.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 
 //Sealed class é usada para restringir uma hierarquia, ou seja, se um valor pode ser de um conjunto limitado de tipos
@@ -130,7 +131,7 @@ fun addConstraints(list : MutableList<String>): MutableList<String>{
     return newList
 }
 
-data class identTable(val d : Dictionary<String, String>) //dicionario de string(ident)->string(tipo)
+data class identTable(var d : HashMap<String, String>) //dicionario de string(ident)->string(tipo)
 //data class identTable(val d : Dictionary<String, MutableList<String>>) // dicionario de string(ident)->constraints
 
 var x : Int = 0
@@ -423,7 +424,7 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             Pair(newConstraints2.first, endConstraints)
         }
         is TmVar -> { //C-Id
-            var tipo : String = ident.d.get(e.x)
+            var tipo : String = ident.d[e.x]!!
             Pair(tipo, constraints)
         }
         is TmApp -> {
