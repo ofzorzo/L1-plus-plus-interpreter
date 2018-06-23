@@ -87,6 +87,7 @@ data class Env(val hm : HashMap<TmVar, Value>)
 
 
 class NoRuleApplies : Throwable()
+class UnifyFail : Throwable()
 class IdentNotDefined : Throwable()
 class SintaxError : Throwable()
 class ParentesisDoesNotMatch : Throwable()
@@ -539,6 +540,95 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
         else -> throw  NoRuleApplies()
     }
 }
+
+fun collectFunctionParts(function : String) : MutableList<String> {
+    if (function.contains("->")) {
+        var openParentesisCounter = 0
+        var closeParentesisCounter = 0
+        var charIsLine = false
+        var cutIndex = -1
+        for (i in 0 until function.length) {
+            if (function[i].compareTo('(') == 0) {
+                openParentesisCounter += 1
+                charIsLine = false
+            } else if (function[i].compareTo(')') == 0) {
+                closeParentesisCounter += 1
+                charIsLine = false
+            } else if (function[i].compareTo('-') == 0) {
+                charIsLine = true
+            } else if (function[i].compareTo('>') == 0 && charIsLine) {
+                if (openParentesisCounter == closeParentesisCounter + 1)
+                    cutIndex = i
+                charIsLine = false
+            }
+        }
+        var parts: MutableList<String> = mutableListOf()
+        var firstPart = function.substring(1, cutIndex - 1)
+        parts.add(0, firstPart)
+        var secondPart = function.substring(cutIndex + 1, function.length - 1)
+        parts.add(1, secondPart)
+        return parts
+    } else {
+        return mutableListOf()
+    }
+}
+
+fun unify(constraints : MutableList<String>, substitions : MutableList<String>) : MutableList<String>{
+    if (constraints.isEmpty()){
+        return substitions;
+    } else {
+        var firstConstraint : String
+        var typesToCompare : List<String>
+        var S : String
+        var T : String
+        var termsS : MutableList<String>
+        var termsT : MutableList<String>
+
+        firstConstraint = constraints.get(0)
+        typesToCompare = firstConstraint.split("=")
+        S = typesToCompare.get(0)
+        T = typesToCompare.get(1)
+        termsS = collectFunctionParts(S)
+        termsT = collectFunctionParts(T)
+
+        if (S.contains(" List") && T.contains(" List")) {
+            S = S.replace(" List", "")
+            T = T.replace(" List", "")
+        } else if (S.contains(" List") || T.contains(" List")) {
+            throw UnifyFail()
+        }
+
+        if (S == T) {
+            constraints.removeAt(0)
+            return unify(constraints, substitions)
+        } else if (termsS.size == termsT.size && termsS.size > 1) {
+            constraints.removeAt(0)
+            for (i in 0 until termsS.size)
+                constraints.add(termsS.get(i) + "=" + termsT.get(i))
+            return unify(constraints, substitions)
+        } else if (S.startsWith("X") && !T.contains(S)) {
+            constraints.removeAt(0)
+            for (i in 0 until constraints.size)
+                constraints.set(i, constraints.get(i).replace(S, T, false))
+            for (j in 0 until substitions.size)
+                substitions.set(j, substitions.get(j).replace(S, T, false))
+            substitions.add(S + "=" + T)
+            return unify(constraints, substitions)
+        } else if (T.startsWith("X") && !S.contains(T)) {
+            constraints.removeAt(0)
+            for (i in 0 until constraints.size)
+                constraints.set(i, constraints.get(i).replace(T, S, false))
+            for (j in 0 until substitions.size)
+                substitions.set(j, substitions.get(j).replace(T, S, false))
+            substitions.add(T + "=" + S)
+            return unify(constraints, substitions)
+        } else {
+            throw UnifyFail()
+        }
+    }
+}
+
+
 
 //Trechos marcados com:
 //  * : nunca devem acontecer se verificação de tipos for correta
