@@ -2,78 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b09ea6a2-3a5c-4fac-b954-9dbcf36fadc5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TypeConstraintsCollectorTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/AddOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/AddOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/AddOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/AddOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/AndOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/AndOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/AndOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/AndOp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/BigStepEvaluatorKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/BigStepEvaluatorKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/BigStepTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/BigStepTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/BinBoolOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/BinBoolOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/BinNumOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/BinNumOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/CompNumOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/CompNumOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/DivOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/DivOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/DivOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/DivOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Env.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Env.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/EqOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/EqOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/EqOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/EqOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/GeOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/GeOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/GeOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/GeOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/GrOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/GrOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/GrOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/GrOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/IdentNotDefined.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/IdentNotDefined.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/MulOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/MulOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/MulOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/MulOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/NeqOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/NeqOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/NeqOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/NeqOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/NoRuleApplies.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/NoRuleApplies.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/NotOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/NotOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/NotOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/NotOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/OrOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/OrOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/OrOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/OrOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/ParentesisDoesNotMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/ParentesisDoesNotMatch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Raise.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Raise.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SeOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SeOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SeOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SeOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SintaxError.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SintaxError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SmOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SmOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SmOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SmOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SubOp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SubOp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/SubOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/SubOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Term.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Term.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmBool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmBool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmCat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmCat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmFinishExpr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmFinishExpr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmFn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmFn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmHd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmHd.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmIf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmIf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmIsEmpty.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmIsEmpty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmLet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmLet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmLetRec.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmLetRec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmNil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmNil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmNum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmNum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmRaise.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmRaise.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmTl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmTl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmTryWith.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmTryWith.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TmVar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TmVar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TyBool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TyBool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TyFn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TyFn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TyInt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TyInt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/TyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/TyList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Type.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/UnaryBoolOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/UnaryBoolOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/VClosure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/VClosure.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/VRecClosure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/VRecClosure.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Value.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Value.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/ValueOrRaise.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/ValueOrRaise.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Vbool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Vbool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Vlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Vlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Vnil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Vnil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/L1_plus_plus/Vnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/L1_plus_plus/Vnum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BigStepEvaluator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/BigStepEvaluator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BigStepTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/BigStepTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TypeConstraintsCollectorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/TypeConstraintsCollectorTest.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,20 +22,8 @@
       <file leaf-file-name="TokenizationTest.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state>
               <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BigStepTest.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="110" column="4" lean-forward="true" selection-start-line="110" selection-start-column="4" selection-end-line="111" selection-end-column="55" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -112,8 +34,8 @@
       <file leaf-file-name="ToStringTest.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ToStringTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="75" column="44" lean-forward="true" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+            <state relative-caret-position="-1191">
+              <caret line="33" column="51" lean-forward="true" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -121,24 +43,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BigStepEvaluator.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BigStepEvaluator.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="204" column="16" selection-start-line="204" selection-start-column="11" selection-end-line="204" selection-end-column="16" />
+            <state relative-caret-position="209">
+              <caret line="436" column="26" selection-start-line="436" selection-start-column="26" selection-end-line="436" selection-end-column="26" />
               <folding>
                 <element signature="e#0#150#0" expanded="true" />
-                <element signature="e#4820#5020#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TypeConstraintsCollectorTest.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TypeConstraintsCollectorTest.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TypeConstraintsCollectorTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="734">
+              <caret line="108" column="10" selection-start-line="108" selection-start-column="10" selection-end-line="108" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BigStepTest.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-443">
+              <caret line="143" column="25" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="25" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -157,30 +90,42 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fromString</find>
-      <find />
-      <find>rec</find>
-      <find>Type</find>
-      <find>toString</find>
-      <find>tmvar</find>
-      <find>tmnum</find>
-      <find>tostring</find>
-      <find>andop</find>
-      <find>tmfinishexpr</find>
-      <find>val d</find>
-      <find>Env</find>
-      <find>Env(</find>
-      <find>d.get</find>
-      <find>hashmap</find>
       <find>hm.</find>
       <find>hm</find>
       <find>hm[</find>
-      <find>name</find>
       <find>optest</find>
       <find>if2</find>
       <find>defvar</find>
       <find>tmlet</find>
+      <find>name</find>
+      <find>name,</find>
+      <find>rec</find>
+      <find>fn</find>
+      <find>, ,</find>
+      <find>, implicit)</find>
+      <find>tostring</find>
+      <find>-&gt;</find>
+      <find>-&gt;in</find>
+      <find>tmlist</find>
+      <find>-&gt;&quot;</find>
+      <find>list1</find>
+      <find>TmTl-&gt;</find>
+      <find>TmTl -&gt;</find>
+      <find>tmnum -&gt;</find>
+      <find>X+&quot;</find>
+      <find>tmtl</find>
+      <find>zorzo</find>
+      <find>list&quot;</find>
+      <find>List</find>
+      <find>TmNil -&gt;</find>
+      <find>tmnil</find>
+      <find>tmvar</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>, implicit, x)</replace>
+      <replace>,</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -194,8 +139,8 @@
         <option value="$PROJECT_DIR$/src/ToStringTest.kt" />
         <option value="$PROJECT_DIR$/src/bigStepTest.kt" />
         <option value="$PROJECT_DIR$/src/BigStepTest.kt" />
-        <option value="$PROJECT_DIR$/src/BigStepEvaluator.kt" />
         <option value="$PROJECT_DIR$/src/TypeConstraintsCollectorTest.kt" />
+        <option value="$PROJECT_DIR$/src/BigStepEvaluator.kt" />
       </list>
     </option>
   </component>
@@ -208,9 +153,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="463" />
+    <option name="y" value="5" />
     <option name="width" value="1936" />
     <option name="height" value="1096" />
   </component>
@@ -220,8 +165,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,7 +187,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,6 +196,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
@@ -308,6 +254,23 @@
       <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
     </configuration>
+    <configuration name="BigStepTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="L1_plus_plus" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BigStepTest" />
+      <option name="METHOD_NAME" value="opTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="BigStepTest.letTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="L1_plus_plus" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -336,23 +299,6 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="BigStepTest.opTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-      <module name="L1_plus_plus" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BigStepTest" />
-      <option name="METHOD_NAME" value="opTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
@@ -534,7 +480,7 @@
       <envs />
     </configuration>
     <list>
-      <item itemvalue="JUnit.BigStepTest.opTest" />
+      <item itemvalue="JUnit.BigStepTest" />
       <item itemvalue="JUnit.TypeConstraintsCollectorTest" />
       <item itemvalue="JUnit.BigStepTest.letTest" />
       <item itemvalue="JUnit.BigStepTest.listOpTest" />
@@ -571,7 +517,8 @@
       <workItem from="1529628204286" duration="14071000" />
       <workItem from="1529686187352" duration="9638000" />
       <workItem from="1529698741598" duration="17087000" />
-      <workItem from="1529717197924" duration="4878000" />
+      <workItem from="1529717197924" duration="7020000" />
+      <workItem from="1529758809770" duration="15346000" />
     </task>
     <task id="LOCAL-00001" summary="rename the project">
       <created>1527287798274</created>
@@ -608,64 +555,93 @@
       <option name="project" value="LOCAL" />
       <updated>1529714777305</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Testes de type constraint iniciados">
+      <created>1529722139501</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1529722139501</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Só um comentário pro terceiro teste ser compreensivel">
+      <created>1529722948218</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1529722948218</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Índice inicial das variáveis de tipo é passado como parâmetro; retira argumentos desnecessários (exceto o recursionLevel)">
+      <created>1529763857657</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1529763857657</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Teste com função recursiva pra criar vários Xs">
+      <created>1529774886374</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1529774886374</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TypeConstraintsCollectorTest_ifTest - 2018.06.22 at 23h 38m 29s.xml">
-      <configuration name="TypeConstraintsCollectorTest.ifTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeConstraintsCollectorTest_ifTest - 2018.06.22 at 23h 38m 43s.xml">
-      <configuration name="TypeConstraintsCollectorTest.ifTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeConstraintsCollectorTest_ifTest - 2018.06.22 at 23h 38m 51s.xml">
-      <configuration name="TypeConstraintsCollectorTest.ifTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 39m 25s.xml">
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.23 at 14h 24m 05s.xml">
       <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 39m 32s.xml">
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.23 at 14h 26m 20s.xml">
       <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 40m 14s.xml">
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.23 at 14h 33m 18s.xml">
       <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 40m 57s.xml">
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.23 at 14h 33m 27s.xml">
       <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 43m 58s.xml">
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.23 at 14h 34m 45s.xml">
       <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 44m 32s.xml">
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.23 at 14h 34m 51s.xml">
       <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeConstraintsCollectorTest - 2018.06.22 at 23h 46m 02s.xml">
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.23 at 14h 35m 19s.xml">
+      <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.23 at 14h 35m 27s.xml">
+      <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.23 at 14h 42m 53s.xml">
+      <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TypeConstraintsCollectorTest - 2018.06.23 at 14h 46m 16s.xml">
       <configuration name="TypeConstraintsCollectorTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91880000" />
+    <option name="totallyTimeSpent" value="109368000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="11" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32925585" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32407406" />
       <window_info anchor="right" id="Palette&#9;" order="11" />
       <window_info id="Image Layers" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="11" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005208" side_tool="true" weight="0.32925585" />
       <window_info anchor="right" id="Maven Projects" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49739584" weight="0.18450561" />
-      <window_info active="true" anchor="bottom" id="Run" order="11" sideWeight="0.49947917" visible="true" weight="0.32925585" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49739584" weight="0.18415637" />
+      <window_info active="true" anchor="bottom" id="Run" order="11" sideWeight="0.49947917" visible="true" weight="0.3312946" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info id="Capture Tool" order="8" />
       <window_info id="Designer" order="8" />
-      <window_info content_ui="combo" id="Project" order="8" visible="true" weight="0.25572917" />
+      <window_info content_ui="combo" id="Project" order="8" visible="true" weight="0.119791664" />
       <window_info anchor="right" id="Database" order="11" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="8" side_tool="true" />
       <window_info anchor="right" id="Ant Build" order="11" />
       <window_info id="UI Designer" order="8" />
@@ -680,7 +656,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="0" />
@@ -698,7 +673,6 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" visible="true" weight="0.32925585" />
       <window_info anchor="bottom" id="Messages" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49739584" weight="0.18450561" />
@@ -713,6 +687,7 @@
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Structure" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="11" />
     </layout-to-restore>
   </component>
@@ -730,7 +705,11 @@
     <MESSAGE value="Adicionadas regras para tratar operadores, listas e exceções" />
     <MESSAGE value="Discussão sobre coletar type constraints" />
     <MESSAGE value="Coleta de type constraints" />
-    <option name="LAST_COMMIT_MESSAGE" value="Coleta de type constraints" />
+    <MESSAGE value="Testes de type constraint iniciados" />
+    <MESSAGE value="Só um comentário pro terceiro teste ser compreensivel" />
+    <MESSAGE value="Índice inicial das variáveis de tipo é passado como parâmetro; retira argumentos desnecessários (exceto o recursionLevel)" />
+    <MESSAGE value="Teste com função recursiva pra criar vários Xs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Teste com função recursiva pra criar vários Xs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -742,6 +721,56 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1760">
+          <caret line="110" column="4" lean-forward="true" selection-start-line="110" selection-start-column="4" selection-end-line="111" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ToStringTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="75" column="44" lean-forward="true" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TypeConstraintsCollectorTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="44" column="225" selection-start-line="44" selection-start-column="225" selection-end-line="44" selection-end-column="225" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -778,7 +807,6 @@
           <caret line="138" column="20" lean-forward="true" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
           <folding>
             <element signature="e#0#150#0" expanded="true" />
-            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -819,7 +847,6 @@
           <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding>
             <element signature="e#0#150#0" expanded="true" />
-            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -850,7 +877,6 @@
           <caret line="463" column="31" selection-start-line="463" selection-start-column="31" selection-end-line="463" selection-end-column="31" />
           <folding>
             <element signature="e#0#150#0" expanded="true" />
-            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -861,7 +887,6 @@
           <caret line="283" selection-start-line="283" selection-end-line="283" />
           <folding>
             <element signature="e#0#150#0" expanded="true" />
-            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -872,7 +897,6 @@
           <caret line="283" selection-start-line="283" selection-end-line="283" />
           <folding>
             <element signature="e#0#150#0" expanded="true" />
-            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -883,7 +907,6 @@
           <caret line="283" lean-forward="true" selection-start-line="283" selection-end-line="283" />
           <folding>
             <element signature="e#0#150#0" expanded="true" />
-            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -894,7 +917,6 @@
           <caret line="332" column="4" selection-start-line="332" selection-start-column="4" selection-end-line="332" selection-end-column="4" />
           <folding>
             <element signature="e#0#150#0" expanded="true" />
-            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -905,7 +927,6 @@
           <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
           <folding>
             <element signature="e#0#150#0" expanded="true" />
-            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -916,7 +937,6 @@
           <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
           <folding>
             <element signature="e#0#150#0" expanded="true" />
-            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
@@ -927,15 +947,24 @@
           <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#150#0" expanded="true" />
-            <element signature="e#4820#5020#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TokenizationTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state>
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-443">
+          <caret line="143" column="25" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="25" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -944,29 +973,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ToStringTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="75" column="44" lean-forward="true" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="204" column="16" selection-start-line="204" selection-start-column="11" selection-end-line="204" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#150#0" expanded="true" />
-            <element signature="e#4820#5020#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BigStepTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="110" column="4" lean-forward="true" selection-start-line="110" selection-start-column="4" selection-end-line="111" selection-end-column="55" />
+        <state relative-caret-position="-1191">
+          <caret line="33" column="51" lean-forward="true" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -975,10 +983,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TypeConstraintsCollectorTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="734">
+          <caret line="108" column="10" selection-start-line="108" selection-start-column="10" selection-end-line="108" selection-end-column="10" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BigStepEvaluator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="436" column="26" selection-start-line="436" selection-start-column="26" selection-end-line="436" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#150#0" expanded="true" />
           </folding>
         </state>
       </provider>

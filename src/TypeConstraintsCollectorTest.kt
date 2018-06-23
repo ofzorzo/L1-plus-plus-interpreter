@@ -122,4 +122,17 @@ class TypeConstraintsCollectorTest {
         Assert.assertEquals(Pair("X0 list", mutableListOf<String>("int list=X0 list")), typeConsColl(tail2, ident2, 0, mutableListOf(), false, 0))
     }*/
 
+    /*
+    private val isEmpty1 = TmIsEmpty(list4)
+    private val isEmpty2 = TmIsEmpty(list3)
+    @Test
+    fun isEmpty(){
+        var ident = identTable(hashMapOf())
+        Assert.assertEquals(Pair("bool", mutableListOf<String>("X1 list=X0 list")), typeConsColl(isEmpty1, ident, 0, mutableListOf(), false, 0))
+
+        var ident2 = identTable(hashMapOf())
+        Assert.assertEquals(Pair("bool", mutableListOf<String>("int list=X0 list")), typeConsColl(isEmpty2, ident2, 0, mutableListOf(), false, 0))
+
+    }
+    */
 }

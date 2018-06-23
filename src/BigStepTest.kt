@@ -92,10 +92,20 @@ class BigStepTest {
     private val doubleFn = TmFn(TmVar("x"), TyInt(), AddOp(TmVar("x"), TmVar("x")))
     private val ifFn = TmFn(TmVar("b"), TyBool(), TmIf(TmVar("b"), TmNum(2), TmNum(3)))
 
+    /*private val f = TmVar("f")
+    private val inteiro = TyInt()
+    private val inteiroParaBool = TyFn(TyInt(), TyBool())
+    private val y = TmVar("y")
+    private val e1 = EqOp(f, f)
+
+    private val fn1 = TmFn(TmVar("x"), inteiro, e1)*/
+
     @Test
     fun fnTest() {
         Assert.assertEquals(bigStep(doubleFn, emptEnv), VClosure(doubleFn.x, doubleFn.e, emptEnv))
+        //Assert.assertEquals(bigStep(fn1, emptEnv), VClosure(fn1.x, fn1.e, emptEnv))
         Assert.assertEquals(bigStep(ifFn, emptEnv), VClosure(ifFn.x, ifFn.e, emptEnv))
+
 
     }
 
@@ -125,6 +135,8 @@ class BigStepTest {
     @Test
     fun letRecTest() {
         Assert.assertEquals(bigStep(letRec1, emptEnv), Vnum(120))
+        /*val letRec2 = TmLetRec(TmVar("f"), TyInt(), TyFn(TyInt(), TyBool()), TmVar("y"), EqOp(num2, num2), TmVar("y"))
+        Assert.assertEquals(bigStep(letRec2, emptEnv), Vnum(120))*/
     }
 
 

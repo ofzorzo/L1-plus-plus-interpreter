@@ -133,10 +133,10 @@ fun addConstraints(list : MutableList<String>): MutableList<String>{
 
 data class identTable(var d : HashMap<String, String>) //dicionario de string(ident)->string(tipo)
 //data class identTable(val d : Dictionary<String, MutableList<String>>) // dicionario de string(ident)->constraints
-
 var x : Int = 0
-
-fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints : MutableList<String>, name : String, implicit: Boolean): Pair<String, MutableList<String>> {
+fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints : MutableList<String>, implicit: Boolean, identStart : Int = 0): Pair<String, MutableList<String>> {
+    //var x : Int = identStart
+    println("current X index: "+x.toString())
     return when (e){
         is TmFn ->{
             if(implicit) {
@@ -146,11 +146,11 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
                 x += 1
 
                 ident.d.put(e.x.x, X)
-                newConstraints = typeConsColl(e.e, ident, recursionLevel + 1, constraints, name, implicit)
+                newConstraints = typeConsColl(e.e, ident, recursionLevel + 1, constraints, implicit, x)
 
                 endConstraints = addConstraints(constraints, newConstraints.second)
 
-                Pair(X+"->"+newConstraints.first, endConstraints)
+                Pair("("+X+"->"+newConstraints.first+")", endConstraints)
             }
             else{
                 var newConstraints: Pair<String, MutableList<String>>
@@ -159,11 +159,11 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
                 ident.d.put(e.x.x, toString(e.t)) //bota identificador no dicionario e o seu tipo tbm
 
                 //pega tipo e constraints da expressao
-                newConstraints = typeConsColl(e.e, ident, recursionLevel + 1, constraints, name, implicit)
-                var string : String = toString(e.t)+">"+newConstraints.first
+                newConstraints = typeConsColl(e.e, ident, recursionLevel + 1, constraints, implicit, x)
+                var string : String = toString(e.t)+"->"+newConstraints.first
 
                 endConstraints = addConstraints(constraints, newConstraints.second)
-                Pair(string, endConstraints)
+                Pair("("+string+")", endConstraints)
             }
         }
         is TmLet -> {
@@ -174,10 +174,10 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
                 var X : String = "X"+x.toString()
                 x += 1
 
-                newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
+                newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
 
                 ident.d.put(e.x.x, X)
-                newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+                newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
 
                 endConstraints = addConstraints(constraints, newConstraints.second)
                 endConstraints = addConstraints(endConstraints, newConstraints2.second)
@@ -190,11 +190,11 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
                 var endConstraints: MutableList<String>
 
                 //vai conter T1
-                newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
+                newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
 
                 ident.d.put(e.x.x, toString(e.t))
                 //vai conter T2
-                newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+                newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
 
                 endConstraints = addConstraints(constraints, newConstraints.second)
                 endConstraints = addConstraints(endConstraints, newConstraints2.second)
@@ -203,6 +203,7 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             }
         }
         is TmLetRec -> {
+            println("TmLetRec")
             if(implicit){
                 var newConstraints: Pair<String, MutableList<String>>
                 var newConstraints2: Pair<String, MutableList<String>>
@@ -212,14 +213,14 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
                 var string2: String = "X"+x.toString()
                 x += 1
                 ident.d.put(e.f.x, string1) // x: X
-                newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+                newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
 
                 ident.d.put(e.x.x, string2) // y: Y
-                newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
+                newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
 
                 endConstraints = addConstraints(constraints, newConstraints.second)
                 endConstraints = addConstraints(endConstraints, newConstraints2.second)
-                endConstraints.add(string1+"="+string2+"->"+newConstraints.first)
+                endConstraints.add(string1+"="+"("+string2+"->"+newConstraints.first+")")
                 Pair(newConstraints2.first, endConstraints)
             }
             else{
@@ -227,13 +228,13 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
                 var newConstraints2: Pair<String, MutableList<String>>
                 var endConstraints: MutableList<String>
 
-                ident.d.put(e.f.x, toString(e.fin)+"->"+toString(e.fout))
+                ident.d.put(e.f.x, "("+toString(e.fin)+"->"+toString(e.fout)+")")
                 //vai conter T2
-                newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+                newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
 
                 ident.d.put(e.x.x, toString(e.fin))
                 //vai conter T1
-                newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
+                newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
 
                 endConstraints = addConstraints(constraints, newConstraints.second)
                 endConstraints = addConstraints(endConstraints, newConstraints2.second)
@@ -241,15 +242,29 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
                 Pair(newConstraints2.first, endConstraints)
             }
         }
-        is TmNum -> Pair("int", constraints)
-        is TmBool -> Pair("bool", constraints)
+        is TmNum -> {
+            println("TmNum")
+            Pair("int", constraints)
+        }
+        is TmBool -> {
+            println("TmBool")
+            Pair("bool", constraints)
+        }
+        is TmList ->{
+            println("TmList")
+            when(e.h){
+                is Vnum -> Pair("int list", constraints)
+                is Vbool -> Pair("bool list", constraints)
+                else -> throw NoRuleApplies()
+            }
+        }
         is AddOp -> {
             var newConstraints: Pair<String, MutableList<String>>
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=int")
@@ -261,8 +276,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=int")
@@ -274,8 +289,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=int")
@@ -287,8 +302,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=int")
@@ -300,8 +315,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=int")
@@ -313,8 +328,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=int")
@@ -326,8 +341,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=int")
@@ -339,8 +354,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=int")
@@ -352,8 +367,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=int")
@@ -365,8 +380,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=int")
@@ -377,7 +392,7 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints.add(newConstraints.first+"=bool")
             Pair("bool", endConstraints)
@@ -387,8 +402,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=bool")
@@ -400,8 +415,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints.add(newConstraints.first+"=bool")
@@ -409,13 +424,14 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             Pair("bool", endConstraints)
         }
         is TmIf -> {
+            println("TmIf")
             var newConstraints: Pair<String, MutableList<String>>
             var newConstraints2: Pair<String, MutableList<String>>
             var newConstraints3: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints3 = typeConsColl(e.e3, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints3 = typeConsColl(e.e3, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
             endConstraints = addConstraints(endConstraints, newConstraints3.second)
@@ -424,24 +440,27 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             Pair(newConstraints2.first, endConstraints)
         }
         is TmVar -> { //C-Id
+            println("TmVar")
             var tipo : String = ident.d[e.x]!!
             Pair(tipo, constraints)
         }
         is TmApp -> {
+            println("TmApp")
             var newConstraints: Pair<String, MutableList<String>>
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
             var X : String = "X"+x.toString()
             x += 1
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
 
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
-            endConstraints.add(newConstraints.first+"="+newConstraints2.first+"->"+X)
+            endConstraints.add(newConstraints.first+"="+"("+newConstraints2.first+"->"+X+")")
             Pair(X, endConstraints)
         }
         is TmNil -> {
+            println("TmNil")
             var string : String = "X"+x.toString()+" list"
             x += 1
             Pair(string, constraints)
@@ -451,8 +470,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
 
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
@@ -466,31 +485,32 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var X : String = "X"+x.toString()
             x += 1
 
-            newConstraints = typeConsColl(e.e, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e, ident, recursionLevel + 1, constraints, implicit, x)
 
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints.add(newConstraints.first+"="+X+" list")
             Pair(X, endConstraints)
         }
         is TmTl -> {
+            println("TmTl")
             var newConstraints: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
             var string : String = "X"+x.toString()+" list"
             x += 1
 
-            newConstraints = typeConsColl(e.e, ident, recursionLevel + 1, constraints, name, implicit)
-
+            newConstraints = typeConsColl(e.e, ident, recursionLevel + 1, constraints, implicit, x)
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints.add(newConstraints.first+"="+string)
             Pair(string, endConstraints)
         }
         is TmIsEmpty -> {
+            println("TmIsEmpty")
             var newConstraints: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
             var string : String = "X"+x.toString()+" list"
             x += 1
 
-            newConstraints = typeConsColl(e.e, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e, ident, recursionLevel + 1, constraints, implicit, x)
 
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints.add(newConstraints.first+"="+string)
@@ -506,8 +526,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             var newConstraints2: Pair<String, MutableList<String>>
             var endConstraints: MutableList<String>
 
-            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, name, implicit)
-            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, name, implicit)
+            newConstraints = typeConsColl(e.e1, ident, recursionLevel + 1, constraints, implicit, x)
+            newConstraints2 = typeConsColl(e.e2, ident, recursionLevel + 1, constraints, implicit, x)
 
             endConstraints = addConstraints(constraints, newConstraints.second)
             endConstraints = addConstraints(endConstraints, newConstraints2.second)
@@ -946,8 +966,8 @@ fun toString(t : Type) : String
     {
         is TyInt -> "int"
         is TyBool -> "bool"
-        is TyFn -> toString(t.inp) + "->" + toString(t.out)
-        is TyList -> toString(t.T) + "List"
+        is TyFn -> "("+toString(t.inp) + "->" + toString(t.out)+")"
+        is TyList -> toString(t.T) + " list"
     }
 }
 
