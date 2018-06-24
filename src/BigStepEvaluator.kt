@@ -13,6 +13,7 @@ sealed class Term
 sealed class Type
 class TyInt : Type()
 class TyBool : Type()
+class TyUnknown : Type()
 data class TyFn(val inp : Type, val out : Type) : Type()
 data class TyList (val T : Type) : Type()
 
@@ -91,6 +92,7 @@ class UnifyFail : Throwable()
 class IdentNotDefined : Throwable()
 class SintaxError : Throwable()
 class ParentesisDoesNotMatch : Throwable()
+class ParserError : Throwable()
 
 fun buildVList(l : Term) : Value{
 
@@ -779,129 +781,7 @@ fun bigStep (e : Term, env : Env) : ValueOrRaise{
         else -> throw  NoRuleApplies()
     }
 }
-/*
-fun fromString(expression: String ) : Term
-{
-    val normExpr = normalizeExpression(expression)
-    val tokens = separateInput(normExpr)
 
-    return parse(tokens).first
-
-}
-
-
-fun checkParentesis(s: String) : Pair<Boolean, ArrayList<Pair<Int, Int>>>{
-    val parQueue : Queue<Int> = ArrayDeque<Int>()
-    val matchedParentesis : ArrayList<Pair<Int, Int>> = arrayListOf()
-
-    for(i:Int in 0 until s.length){
-        if(s[i] == '(') {
-            parQueue.add(i + 1)
-        }else if(s[i] == ')')
-        {
-            if(parQueue.isEmpty())
-                return Pair(false, matchedParentesis)
-            else
-                matchedParentesis.add(Pair(parQueue.remove(), i-1))
-        }
-    }
-
-    if (parQueue.isEmpty())
-    {
-        return Pair(true, matchedParentesis)
-    }
-    return Pair(false, matchedParentesis)
-}
-
-
-
-
-
-fun parseIf(tokens : ArrayList<String>, index : Int) : Pair<TmIf, Int>{
-    val condExpr : Pair<Term, Int> = parse(tokens, index, "then")
-    val thenExpr : Pair<Term, Int> = parse(tokens, index + condExpr.second, "else")
-    val elseExpr : Pair<Term, Int> = parse(tokens, index + condExpr.second + thenExpr.second, "")
-    return Pair(TmIf(condExpr.first, thenExpr.first, elseExpr.first), elseExpr.second + thenExpr.second + condExpr.second)
-}
-
-fun parseFn(tokens : ArrayList<String>, index : Int) : Pair<TmFn, Int>{
-    val varExpr : TmVar = TmVar(tokens[index])
-    val typeExpr : Pair<Type, Int> = parseType(tokens, index + 2) // 2 : string da variável + separador ':'
-    val funBody : Pair<Term, Int> = parse(tokens, index + 2 + typeExpr.second + 1) // soma um pelo termo '=>'
-
-    return Pair(TmFn(varExpr, typeExpr.first, funBody.first), 2 + typeExpr.second + funBody.second)
-}
-
-fun parseType(tokens: ArrayList<String>, index : Int, termination: String? = null) : Pair<Type, Int>{
-
-    return when {
-        "(" -> {
-            val sublevelTree: Pair<Term, Int> = parseType(tokens, index + 1, ")")
-            Pair(sublevelTree.first, sublevelTree.second + 2) // soma a abertura e fechamento de parencesis
-        }
-    }
-}
-
-fun parse(tokens : ArrayList<String>, index:Int = 0, termination:String? = null) : Pair<Term, Int>{
-    val firstToken : String = tokens[index]
-
-    if(termination != null && firstToken == termination)
-        return Pair(TmFinishExpr(), 0)
-
-    return when(firstToken)
-    {
-        /**
-         *data class TmVar(val x : String) : Term()
-        class TmIf(val e1: Term, val e2 : Term, val e3 : Term) : Term()
-        data class TmApp(val e1 : Term, val e2 : Term) : Term()
-        data class TmFn(val x : TmVar, val t : Type , val e: Term) : Term()
-        data class TmLet(val x : TmVar, val t: Type, val e1 : Term, val e2:Term) : Term()
-        data class TmLetRec(val f: TmVar, val fin : Type, val fout : Type, val x: TmVar, val e1 : Term, val e2:Term) : Term()
-        data class TmTryWith(val e1 : Term, val e2:Term) : Term()
-        data class TmHd (val e : Term) : Term()
-        data class TmTl (val e : Term) : Term()
-        data class TmIsEmpty(val e : Term) : Term()
-        data class TmCat(val e1 : Term, val e2 : Term) : Term()
-         * */
-        "(" -> {
-            val sublevelTree : Pair<Term, Int> = parse(tokens, index + 1, ")")
-            Pair(sublevelTree.first, sublevelTree.second + 2) // soma a abertura e fechamento de parencesis
-        }
-        "if" ->parseIf(tokens, index + 1)
-        "fn" -> parseFn(tokens, index + 1)
-        "let" -> parseLet(tokens, index + 1)
-        "isempty" -> parseIsEmpty(tokens, index + 1)
-        "hd" -> parseHd(tokens, index + 1)
-        "tl" -> parseTl(tokens, index + 1)
-        "raise" -> parseRaise(tokens, index + 1)
-        "false" -> parseFalse(tokens, index + 1)
-        "true" -> parseTrue(tokens, index + 1)
-        "nil" -> parseNil(tokens, index + 1)
-        "try" -> parseTry(tokens, index + 1)
-        "not" -> parseNot(tokens, index + 1)
-        else -> {
-            // Nesse caso o termo pode ser:
-            // * Um operador binário (aritmeticos, booleanos, aplicação, concatenação, etc)
-            // * Uma variável
-            // * Um valor
-        }
-
-
-    }
-}
-
-//retorna o termo e um inteiro com a quantidade de tonkens usadas
-fun parse(tokens : ArrayList<String>) : Pair<Term, Int>{
-
-    val firstToken : String = tokens[0]
-    return when(firstToken){
-
-        "if" -> parseIf(tokens)
-    }
-
-}
-
-*/
 fun oneCharToken(c : Char) : Boolean{
     return c == '+' || c == '-' || c == '*' || c == '>' || c == '<' || c =='=' || c == ':' || c == '(' || c == ')'
 }
@@ -1021,7 +901,6 @@ fun tokenize(s:String) : ArrayList<String>{
 
 fun separateInput(s : String) : ArrayList<String>{
     val spaceSeparated = s.split(" ")
-    println(spaceSeparated)
     val tokens = arrayListOf<String>()
     for (subs in spaceSeparated){
         val sepTok = tokenizeIndependentTokens(subs)
@@ -1029,6 +908,40 @@ fun separateInput(s : String) : ArrayList<String>{
         {
             tokens.addAll(tokenize(tok))
         }
+    }
+    val specialTokens = listOf("+", "-") // colocar aqui tokens que podem ter mais de um significado semantico
+    var mistakenIndexes = listOf<Int>()
+    for(i in 0 until tokens.size){
+        for (j in 0 until specialTokens.size) { // sinal
+            if (tokens[i] == specialTokens[j]) {
+                // - / + precisa trocar quando representam o sinal do número
+                //representam o sinal do número quando o token anterior for '(' || '*' || operadores de comparação ||
+                // operadores aritméticos || :: || if || try || with || = || then || else
+                //quando representam sinal vão ser unidos com o token seguinte
+                if (i == 0)
+                    mistakenIndexes = mistakenIndexes.plus(i)
+                else if (i < tokens.size + 1) {
+                    val prev = tokens[i - 1]
+                    if (prev == "(" || prev == "*" || prev == "+" || prev == "-" || prev == "div" || prev == "<" ||
+                            prev == "<=" || prev == "==" || prev == "!=" || prev == ">=" || prev == ">" || prev == "::" ||
+                            prev == "if" || prev == "try" || prev == "with" || prev == "=" || prev == "then" ||
+                            prev == "else"
+                    ) {
+                        mistakenIndexes = mistakenIndexes.plus(i)
+                    }
+
+                }
+
+            }
+        }
+
+    }
+
+    for (index in mistakenIndexes.reversed()) { // reverte para não precisar atualizar índices
+        val newToken = tokens[index].plus(tokens[index+1])
+        tokens.removeAt(index)
+        tokens.removeAt(index) // o próximo
+        tokens.add(index, newToken)
     }
     return tokens
 
@@ -1059,6 +972,7 @@ fun toString(t : Type) : String
         is TyBool -> "bool"
         is TyFn -> "("+toString(t.inp) + "->" + toString(t.out)+")"
         is TyList -> toString(t.T) + " list"
+        is TyUnknown -> "X"
     }
 }
 
@@ -1130,36 +1044,3 @@ fun toString(v: ValueOrRaise) : String
         is VRecClosure -> "< "+ v.f.x +", "+ v.x.x + ", " + toString(v.e) + ", " + v.env.hm.toString() + ">"
     }
 }
-
-/*
-fun evaluate(expression: String) : String
-{
-    val initTerm = fromString(expression)
-    val initHash : HashMap<TmVar, Value> = hashMapOf()
-    val initEnv = Env(initHash)
-    val normalForm = bigStep(initTerm, initEnv)
-
-    return toString(normalForm)
-
-}
-
-
-
-fun main(args: Array<String>) {
-
-
-    println("Interpretador of L1++: \n")
-    while (true)
-    {
-        print(">> ")
-        try {
-            val typedExpr: String? = readLine()
-            val result:String = evaluate(typedExpr!!)
-            println(" = $result") // usa template $ para substituição ao invés de concatenação
-        }catch(e : Throwable){
-            error("Exception: " + e.message)
-        }
-    }
-
-}
-*/
