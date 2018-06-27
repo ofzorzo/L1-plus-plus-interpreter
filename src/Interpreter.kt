@@ -5,7 +5,7 @@ class Interpreter {
     private var implicit : Boolean = true
 
     private fun interpret(){
-        if (this.implicit) println("Implicit interpreter of L1++") else println("Explicit interpreter of L1++")
+        if (this.implicit) println("Implicit program type analyser of L1++") else println("Explicit program type analyser of L1++")
         val parser = if(this.implicit) ImplicitParser() else ExplicitParser()
         val emptEnv = Env(hashMapOf())
         while (true)
@@ -25,13 +25,13 @@ class Interpreter {
 
             }catch(e : NoRuleApplies){
 
-                println("NoRuleApplies: " + e.message)
+                println("NoRuleApplies: " + e.localizedMessage)
             }catch(e : UnifyFail){
                 println("Type infer failed")
             }catch(e: IdentNotDefined){
-                println("Variable not defined")
+                println(e.localizedMessage)
             }catch(e : SintaxError){
-                println("Sintax error: " + e.message)
+                println("Syntax error: " + e.localizedMessage)
 
             }catch(e : ParserError){
                 println("Parsing error")
@@ -41,7 +41,7 @@ class Interpreter {
 
     fun main()
     {
-        println("L1++ Interpreter : Please choose the configuration\n\t1 - Implicit L1++\n\t2 - Explicit L1++")
+        println("L1++ Program Type Analyser : Please choose the configuration\n\t1 - Implicit L1++\n\t2 - Explicit L1++")
         var interpreterCalled = false
         val option = readLine()
         while(!interpreterCalled){
