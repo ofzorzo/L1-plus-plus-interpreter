@@ -3,6 +3,7 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
+import kotlin.system.exitProcess
 
 
 //Sealed class é usada para restringir uma hierarquia, ou seja, se um valor pode ser de um conjunto limitado de tipos
@@ -445,8 +446,14 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
         }
         is TmVar -> { //C-Id
             //println("TmVar")
-            var tipo : String = ident.d[e.x]!!
-            Pair(tipo, constraints)
+            try {
+                var tipo: String = if (ident.d[e.x] != null) ident.d[e.x]!! else throw NullPointerException("\nIdentifier \"" + e.x + "\" is nonexistent. Type constraints collection ended abnormally.")
+                Pair(tipo, constraints)
+            }
+            catch (exception: NullPointerException){
+                println(exception.localizedMessage)
+                exitProcess(-1)
+            }
         }
         is TmApp -> {
             //println("TmApp")
