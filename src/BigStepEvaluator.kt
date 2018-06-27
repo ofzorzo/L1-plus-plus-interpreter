@@ -90,7 +90,7 @@ data class Env(val hm : HashMap<TmVar, Value>)
 
 class NoRuleApplies(message : String) : Throwable()
 class UnifyFail : Throwable()
-class IdentNotDefined(message : String) : Throwable()
+class IdentNotDefined(override var message: String) : Throwable(message)
 class SintaxError(message: String) : Throwable()
 class ParserError : Throwable()
 
@@ -444,14 +444,8 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             Pair(newConstraints2.first, endConstraints)
         }
         is TmVar -> { //C-Id
-            //println("TmVar")
-            try {
-                var tipo: String = if (ident.d[e.x] != null) ident.d[e.x]!! else throw NullPointerException("\nIdentifier \"" + e.x + "\" is nonexistent. Type constraints collection ended abnormally.")
-                Pair(tipo, constraints)
-            }
-            catch (exception: NullPointerException){
-                throw IdentNotDefined(e.x)
-            }
+            var tipo: String = if (ident.d[e.x] != null) ident.d[e.x]!! else throw IdentNotDefined("Identifier \"" + e.x + "\" is nonexistent. Type constraints collection ended abnormally.")
+            Pair(tipo, constraints)
         }
         is TmApp -> {
             //println("TmApp")
