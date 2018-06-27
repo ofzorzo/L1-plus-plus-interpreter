@@ -637,6 +637,28 @@ fun unify(constraints : MutableList<String>, substitions : MutableList<String>) 
     }
 }
 
+fun separateSubstitution(substitution : String) : Pair<String, String> {
+    if (substitution.contains("=")) {
+        var parts = substitution.split("=")
+        return Pair(parts[0], parts[1])
+    } else
+        throw UnifyFail()
+}
+
+fun applySubs (substitutions: MutableList<String>, T : String) : String {
+    var finalT = T
+    for (i in 0 until substitutions.size) {
+        val parts = separateSubstitution(substitutions.get(i))
+        finalT = finalT.replace(parts.first.replace(" list", ""), parts.second.replace(" list", ""))
+    }
+    return finalT
+}
+
+fun typeInfer(e : Term, ident: identTable, implicit : Boolean) : String {
+    val constraints = typeConsColl(e, ident, 0, mutableListOf(), implicit, true)
+    val substitutions = unify(constraints.second, mutableListOf())
+    return applySubs(substitutions, constraints.first)
+}
 
 
 //Trechos marcados com:
