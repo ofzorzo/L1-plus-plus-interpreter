@@ -88,10 +88,10 @@ class Raise : ValueOrRaise()
 data class Env(val hm : HashMap<TmVar, Value>)
 
 
-class NoRuleApplies(message : String) : Throwable()
+class NoRuleApplies(override var message: String) : Throwable(message)
 class UnifyFail : Throwable()
 class IdentNotDefined(override var message: String) : Throwable(message)
-class SintaxError(message: String) : Throwable()
+class SintaxError(override var message: String) : Throwable(message)
 class ParserError : Throwable()
 
 fun buildVList(l : Term) : Value{
