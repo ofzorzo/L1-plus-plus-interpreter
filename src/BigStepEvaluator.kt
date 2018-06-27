@@ -88,11 +88,10 @@ class Raise : ValueOrRaise()
 data class Env(val hm : HashMap<TmVar, Value>)
 
 
-class NoRuleApplies : Throwable()
+class NoRuleApplies(message : String) : Throwable()
 class UnifyFail : Throwable()
-class IdentNotDefined : Throwable()
-class SintaxError : Throwable()
-class ParentesisDoesNotMatch : Throwable()
+class IdentNotDefined(message : String) : Throwable()
+class SintaxError(message: String) : Throwable()
 class ParserError : Throwable()
 
 fun buildVList(l : Term) : Value{
@@ -101,7 +100,7 @@ fun buildVList(l : Term) : Value{
     {
         is TmNil -> Vnil()
         is TmList -> Vlist(l.h, buildVList(l.t))
-        else -> throw NoRuleApplies() //*
+        else -> throw NoRuleApplies("Expected list but other expression found") //*
     }
 
 }
@@ -260,7 +259,7 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
             when(e.h){
                 is Vnum -> Pair("int list", constraints)
                 is Vbool -> Pair("bool list", constraints)
-                else -> throw NoRuleApplies()
+                else -> throw NoRuleApplies("Expected number or boolean as head of list but other expression found")
             }
         }
         is AddOp -> {
@@ -451,8 +450,7 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
                 Pair(tipo, constraints)
             }
             catch (exception: NullPointerException){
-                println(exception.localizedMessage)
-                exitProcess(-1)
+                throw IdentNotDefined(e.x)
             }
         }
         is TmApp -> {
@@ -546,7 +544,7 @@ fun typeConsColl(e : Term, ident : identTable, recursionLevel : Int, constraints
 
             Pair(newConstraints2.first, endConstraints)
         }
-        else -> throw  NoRuleApplies()
+        else -> throw  NoRuleApplies("Invalid expression")
     }
 }
 
@@ -667,7 +665,7 @@ fun bigStep (e : Term, env : Env) : ValueOrRaise{
     return when (e){
         is TmNum -> Vnum(e.n) // BS-NUM
         is TmBool -> Vbool(e.b) // BS-BOOL
-        is TmVar -> { try{ env.hm[e]!! } catch (ex : Exception){ throw IdentNotDefined() } } //BS-ID
+        is TmVar -> { try{ env.hm[e]!! } catch (ex : Exception){ throw IdentNotDefined(e.x) } } //BS-ID
         is TmList -> buildVList(e) // BS-LIST
         is TmNil -> Vnil() //BS-NIL
         is TmRaise -> Raise() // RAISE
@@ -675,7 +673,7 @@ fun bigStep (e : Term, env : Env) : ValueOrRaise{
             val condition : ValueOrRaise = bigStep(e.e1, env)
             when {
                 condition is Raise -> Raise() //BS-IFRAISE
-                condition !is Vbool -> throw NoRuleApplies() // *
+                condition !is Vbool -> throw NoRuleApplies("Expected boolean as condition of \"if\" expression") // *
                 condition.b -> bigStep(e.e2, env) // BS-IFTR
                 else -> bigStep(e.e3, env) //BS-IFFLS
             }
@@ -717,7 +715,7 @@ fun bigStep (e : Term, env : Env) : ValueOrRaise{
                         extEnv.hm[e1Result.f] = e1Result
                         bigStep(e1Result.e, extEnv) //BS-APPREC
                     }
-                    else -> throw NoRuleApplies() //*
+                    else -> throw NoRuleApplies("Cannot execute expression application when the left side is not function nor recursive function") //*
                 }
             }
             else
@@ -728,7 +726,7 @@ fun bigStep (e : Term, env : Env) : ValueOrRaise{
                 is TmNil -> Vbool(true) // BS-EMPTYNIL
                 is TmList -> Vbool(false) // BS-EMPTYLIST
                 is TmRaise -> Raise() //BS-EMPTYRAISE
-                else -> throw NoRuleApplies() //*
+                else -> throw NoRuleApplies("isempty expects list") //*
             }
         }
 
@@ -737,7 +735,7 @@ fun bigStep (e : Term, env : Env) : ValueOrRaise{
                 is TmNil -> Raise() // BS-HDNIL
                 is TmList -> e.e.h // BS-HD
                 is TmRaise -> Raise() //bs-hdraise
-                else -> throw  NoRuleApplies() //*
+                else -> throw  NoRuleApplies("hd expects list") //*
             }
         }
 
@@ -746,7 +744,7 @@ fun bigStep (e : Term, env : Env) : ValueOrRaise{
                 is TmNil -> Raise() // BS-TLNIL
                 is TmList -> buildVList(e.e.t) // BS-TL
                 is TmRaise -> Raise() //BS-TLRAISE
-                else -> throw NoRuleApplies() //*
+                else -> throw NoRuleApplies("tl expects list") //*
             }
         }
 
@@ -777,7 +775,7 @@ fun bigStep (e : Term, env : Env) : ValueOrRaise{
                 when {
                     e1Result is Raise || e2Result is Raise -> Raise()
                     e1Result is Vnum && e2Result is Vnum -> Vnum(e.f(e1Result.n, e2Result.n))
-                    else -> throw NoRuleApplies()
+                    else -> throw NoRuleApplies("Binary arithmetic operation can only work with numbers")
                 }
             }
         }
@@ -787,7 +785,7 @@ fun bigStep (e : Term, env : Env) : ValueOrRaise{
             when {
                 e1Result is Raise || e2Result is Raise -> Raise()
                 e1Result is Vbool && e2Result is Vbool -> Vbool(e.f(e1Result.b, e2Result.b))
-                else -> throw NoRuleApplies()
+                else -> throw NoRuleApplies("Binary logic operation can only work with booleans")
             }
         }
         is CompNumOp->{
@@ -796,7 +794,7 @@ fun bigStep (e : Term, env : Env) : ValueOrRaise{
             when {
                 e1Result is Raise || e2Result is Raise -> Raise()
                 e1Result is Vnum && e2Result is Vnum -> Vbool(e.f(e1Result.n, e2Result.n))
-                else -> throw NoRuleApplies()
+                else -> throw NoRuleApplies("Comparision operations can only work with numbers")
             }
         }
         is UnaryBoolOp->{
@@ -804,194 +802,14 @@ fun bigStep (e : Term, env : Env) : ValueOrRaise{
             when (e1Result) {
                 is Raise -> Raise()
                 is Vbool -> Vbool(e.f(e1Result.b))
-                else -> throw NoRuleApplies()
+                else -> throw NoRuleApplies("Unary operator \"not\" expects boolean operand")
             }
         }
-        else -> throw  NoRuleApplies()
+        else -> throw  NoRuleApplies("Invalid expression")
     }
 }
 
-fun oneCharToken(c : Char) : Boolean{
-    return c == '+' || c == '-' || c == '*' || c == '>' || c == '<' || c =='=' || c == ':' || c == '(' || c == ')'
-}
-fun twoCharToken(s: String) : Boolean{
-    return s == "::" || s == ">=" || s == "<=" || s == "==" || s == "!=" || s == "->" || s == "=>"
-}
-//é considerado um token independente aquele que pode ter como vizinho qualquer outro caractere e continuará sendo
-//o mesmo token
-fun isIndependentToken(s : String) : Boolean{
-    return when {
-        s.length == 1 -> oneCharToken(s[0])
-        s.length == 2 -> twoCharToken(s)
-        else -> false
-    }
-}
-// A diferença desse para twoCharToken é que os tokens dessa não podem estar conectados com outros caracteres que não sejam tokens
-// ex: if2 seria considerado variável e não expressão if enquanto que >=2 são considerados 2 tokens
-fun twoCharSepToken (s : String) : Boolean {
-    val possibleToken = s.substring(0,2)
-    return when {
-        s.length == 2 -> s == "or" || s == "in" || s == "hd" || s == "tl" || s == "fn" || s == "if"
-        else -> twoCharToken(possibleToken) && (isIndependentToken(s.substring(2,3)) || isIndependentToken(s.substring(2,4)))
-    }
-}
-fun threeCharToken(s:String) : Boolean{
-    val possibleToken = s.substring(0,3)
-    return when{
-        s.length == 3 -> s == "try" || s == "int" || s == "let" || s == "rec" || s == "nil" || s == "div" || s == "not" ||
-                s == "and" || s == "try"
-        else -> threeCharToken(possibleToken) && (isIndependentToken(s.substring(3,4)) || isIndependentToken(s.substring(3, 5)))
-    }
-}
-fun fourCharToken(s:String) : Boolean{
-    val possibleToken = s.substring(0,4)
-    return when{
-        s.length == 4 -> s == "bool" || s == "true" || s == "then" || s == "else" || s == "with" || s == "list"
-        else -> fourCharToken(possibleToken) && (isIndependentToken(s.substring(4, 5)) || isIndependentToken(s.substring(4, 6)))
-    }
-}
 
-fun tokenizeIndependentTokens(s:String) : ArrayList<String>{
-    val tokens = arrayListOf<String>()
-
-    val sepIndexes = arrayListOf<Int>(0)
-
-    var i = 0
-    while (i < s.length) {
-        if (s.substring(i).length >= 2 && twoCharToken(s.substring(i, i+2))) {
-            sepIndexes.add(i)
-            sepIndexes.add(i + 2)
-            i+=2
-        }
-        else if (oneCharToken(s.substring(i)[0])) {
-            sepIndexes.add(i)
-            sepIndexes.add(i + 1)
-            i+=1
-        }
-        else
-            i+=1
-    }
-
-    sepIndexes.add(s.length)
-    for(j in 0 until sepIndexes.size - 1){
-        val first = sepIndexes[j]
-        val second = sepIndexes[j+1]
-
-        tokens.add(s.substring(first, second))
-    }
-    return tokens
-
-}
-
-fun tokenize(s:String) : ArrayList<String>{
-    if(s.isEmpty())
-        return arrayListOf()
-    val firstChar = s[0]
-    val tokens = arrayListOf<String>()
-
-    when{
-        s.length >= 5 && s.substring(0,5) == "raise" ->{
-            tokens.add("raise")
-            tokens.addAll(tokenize(s.substring(5)))
-        }
-
-        s.length >= 7 && s.substring(0,7) == "isempty" ->{
-            tokens.add("isempty")
-            tokens.addAll(tokenize(s.substring(7)))
-        }
-        s.length >= 4 && fourCharToken(s) ->{
-            tokens.add(s.substring(0,4))
-            tokens.addAll(tokenize(s.substring(4)))
-        }
-        s.length >= 3 && threeCharToken(s)->{
-            tokens.add(s.substring(0,3))
-            tokens.addAll(tokenize(s.substring(3)))
-        }
-        s.length >= 2 && twoCharSepToken(s)->{
-            tokens.add(s.substring(0,2))
-            tokens.addAll(tokenize(s.substring(2)))
-        }
-        s.length >= 2 && twoCharToken(s.substring(0,2)) -> {
-            tokens.add(s.substring(0,2))
-            tokens.addAll(tokenize(s.substring(2)))
-        }
-        s.isNotEmpty() && oneCharToken(firstChar) ->{
-            tokens.add(firstChar.toString())
-            tokens.addAll(tokenize(s.substring(1)))
-        }
-        else -> {
-
-            tokens.add(s) // variável ou número inteiro, ambos podem ter qualquer tamanho
-        }
-    }
-
-    return tokens
-}
-
-fun separateInput(s : String) : ArrayList<String>{
-    val spaceSeparated = s.split(" ")
-    val tokens = arrayListOf<String>()
-    for (subs in spaceSeparated){
-        val sepTok = tokenizeIndependentTokens(subs)
-        for (tok in sepTok)
-        {
-            tokens.addAll(tokenize(tok))
-        }
-    }
-    val specialTokens = listOf("+", "-") // colocar aqui tokens que podem ter mais de um significado semantico
-    var mistakenIndexes = listOf<Int>()
-    for(i in 0 until tokens.size){
-        for (j in 0 until specialTokens.size) { // sinal
-            if (tokens[i] == specialTokens[j]) {
-                // - / + precisa trocar quando representam o sinal do número
-                //representam o sinal do número quando o token anterior for '(' || '*' || operadores de comparação ||
-                // operadores aritméticos || :: || if || try || with || = || then || else
-                //quando representam sinal vão ser unidos com o token seguinte
-                if (i == 0)
-                    mistakenIndexes = mistakenIndexes.plus(i)
-                else if (i < tokens.size + 1) {
-                    val prev = tokens[i - 1]
-                    if (prev == "(" || prev == "*" || prev == "+" || prev == "-" || prev == "div" || prev == "<" ||
-                            prev == "<=" || prev == "==" || prev == "!=" || prev == ">=" || prev == ">" || prev == "::" ||
-                            prev == "if" || prev == "try" || prev == "with" || prev == "=" || prev == "then" ||
-                            prev == "else"
-                    ) {
-                        mistakenIndexes = mistakenIndexes.plus(i)
-                    }
-
-                }
-
-            }
-        }
-
-    }
-
-    for (index in mistakenIndexes.reversed()) { // reverte para não precisar atualizar índices
-        val newToken = tokens[index].plus(tokens[index+1])
-        tokens.removeAt(index)
-        tokens.removeAt(index) // o próximo
-        tokens.add(index, newToken)
-    }
-    return tokens
-
-}
-
-
-fun normalizeExpression(expression: String) : String
-{
-
-    val multipleSpaces = " +" // um ou mais espaços
-    val mSpacesRegex : Pattern = Pattern.compile(multipleSpaces)
-    val mSpaceMatcher : Matcher = mSpacesRegex.matcher(expression)
-
-    //remove espaços no inicio
-    var readyExpr : String = mSpaceMatcher.replaceAll(" ")
-    if (readyExpr[0] == ' ')
-        readyExpr = readyExpr.substring(1)
-
-
-    return readyExpr
-}
 
 fun toString(t : Type) : String
 {
@@ -1056,7 +874,7 @@ fun toString(t : Term) : String
         is EqOp -> toString(t.t1) + " == " + toString(t.t2)
         is NeqOp -> toString(t.t1) + " != " + toString(t.t2)
 
-        else -> throw NoRuleApplies()
+        else -> throw NoRuleApplies("Invalid expression")
     }
 }
 
