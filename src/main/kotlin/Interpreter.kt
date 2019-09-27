@@ -39,7 +39,7 @@ class Interpreter {
         }
     }
 
-    fun main()
+    fun interpreter_type()
     {
         println("L1++ Program Type Analyser : Please choose the configuration\n\t1 - Implicit L1++\n\t2 - Explicit L1++")
         var interpreterCalled = false
@@ -68,6 +68,7 @@ class Interpreter {
 }
 
 fun main(args: Array<String>){
+    println("HEY")
     val interp = Interpreter()
-    interp.main()
+    interp.interpreter_type()
 }

@@ -148,4 +148,19 @@ class ToStringTest {
 
 
     }
+
+    @Test
+    fun fat_explicit(){
+        val fat_x = TmLetRec(
+            TmVar("fat"), TyInt(), TyInt(), TmVar("x"),
+            TmIf(
+                EqOp(TmVar("x"), TmNum(0)),
+                TmNum(1),
+                MulOp(TmVar("x"), TmApp(TmVar("fat"), SubOp(TmVar("x"), TmNum(1))))
+            ),
+            TmApp(TmVar("fat"), TmNum(5))
+        )
+        Assert.assertEquals(toString(fat_x), "let rec fat:int->int = (fn x:int=>if x == 0 then 1 else x * (fat) (x - 1)) in (fat) (5)")
+        //the same expression, but in implicit form would be: "let rec fat = (fn x=>if x == 0 then 1 else x * (fat) (x - 1)) in (fat) (5)"
+    }
 }
